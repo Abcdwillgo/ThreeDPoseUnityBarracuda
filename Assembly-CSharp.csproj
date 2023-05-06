@@ -106,6 +106,7 @@
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/glEnum.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Extensions/ByteExtensions.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/MeshPreviewItem.cs" />
+    <Compile Include="Assets/Scripts/BallScript.cs" />
     <Compile Include="Assets/VRM/DepthFirstScheduler/Scheduler.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Extensions/UnityExtensions.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Extensions/TypeExtensions.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/glTFAssets.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Scripts/IO/BvhImporterContext.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/MsgPack/MsgPackParser.cs" />
+    <Compile Include="Assets/Scripts/New Folder/NewBehaviourScript.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/glTFCamera.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Json/JsonValue.cs" />
     <Compile Include="Assets/Scripts/VideoCapture.cs" />
@@ -245,6 +247,7 @@
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/Blinker.cs" />
     <Compile Include="Assets/VRM/DepthFirstScheduler/Scheduler/CurrentThreadScheduler.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/SkinnedMeshUtility/MeshExtensions.cs" />
+    <Compile Include="Assets/Scripts/FireTennisBall.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/BytesBuffer.cs" />
     <Compile Include="Assets/VRM/ShaderProperty/Runtime/VRM/VRM_UnlitTransparent.cs" />
     <Compile Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Scripts/SpringManager.cs" />
@@ -316,30 +319,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/Scripts/Shader/TintShader.shader" />
     <None Include="Assets/VRM/UniVRM/Resources/Shaders/VRMUnlitTransparentZWrite.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hair_ds.shader" />
     <None Include="Assets/VRM/UniGLTF/Resources/Shaders/NormalMapDecoder.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hada.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eyelash_blend.shader" />
     <None Include="Assets/VRM/MToon/MToon/Resources/Shaders/MToonSM4.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/VRM/MToon/MToon/Resources/Shaders/MToonSM3.cginc" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/Scripts/Model/AddOnnxHere.txt" />
     <None Include="Assets/Scripts/Shader/NoiseShader.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
     <None Include="Assets/VRM/UniVRM/Resources/Shaders/VRMUnlitTexture.shader" />
     <None Include="Assets/VRM/MToon/MToon/Resources/Shaders/MToon.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye.shader" />
     <None Include="Assets/VRM/UniVRM/Resources/Shaders/VRMUnlitCutout.shader" />
     <None Include="Assets/VRM/UniUnlit/Resources/UniUnlit.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/StreamingAssets/VRM.Samples/Motions/test.txt" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/Stage/Shader/AlphaMask.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/VRM/UniGLTF/Resources/Shaders/NormalMapEncoder.shader" />
     <None Include="Assets/VRM/UniGLTF/Resources/Shaders/StandardVColor.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hair.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <None Include="Assets/VRM/UniVRM/Resources/Shaders/VRMUnlitTransparent.shader" />
     <None Include="Assets/VRM/MToon/MToon/Resources/Shaders/MToonCore.cginc" />
   </ItemGroup>
