@@ -14,7 +14,7 @@ public class BallScript : MonoBehaviour
     public void FireBall(Vector3 direction, float power, float maxOffset)
     {
         Vector3 offset = new Vector3(Random.Range(-maxOffset, maxOffset), Random.Range(-maxOffset, maxOffset), 0f);
-        rb.position += offset;
+        //rb.position += offset;
         rb.AddForce(direction * power, ForceMode.Impulse);
     }
     private void OnCollisionEnter(Collision other)

@@ -13,7 +13,7 @@ public class FireTennisBall : MonoBehaviour
     public float maxBalls = 5;
     public float reloadTime = 2.5f;
     private bool isReloading = false;
-
+    public GameObject currentAimAssist, aimAssistPrefab;
 
     public Text ballsText;
 
@@ -28,7 +28,7 @@ public class FireTennisBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& !isReloading)
+        if (Input.GetKeyDown(KeyCode.Space) && !isReloading)
         {
             if (numBalls <= 0)
             {
@@ -54,10 +54,16 @@ public class FireTennisBall : MonoBehaviour
     }
     private void FireBall(BallScript ball)
     {
-        Vector3 direction = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f)).normalized;
+        currentAimAssist = Instantiate(aimAssistPrefab);
+        Destroy(currentAimAssist, 1f);
+        //Vector3 direction = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f)).normalized;
+        Vector3 direction = (new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f))).normalized;
+        currentAimAssist.transform.position = initPosition + direction * 10f;
+        //yield return new WaitForSeconds(2f); 
         ball.transform.position = initPosition;
+        System.Threading.Thread.Sleep(1000);
         ball.FireBall(direction, 10f, BallSpeed);
-
+        StartCoroutine(Wait(1f));
     }
 
     public IEnumerator Reloading()
@@ -68,6 +74,9 @@ public class FireTennisBall : MonoBehaviour
         isReloading = false;
         ballsText.text = $"Balls: {numBalls}";
     }
-
+    public IEnumerator Wait(float Second)
+    {
+        yield return new WaitForSeconds(Second);
+    }
 
 }
