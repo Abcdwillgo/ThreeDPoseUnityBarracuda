@@ -64,70 +64,70 @@
     <Compile Include="Assets/VRM/UniUnlit/Editor/UniUnlitEditor.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/MapTest.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Editor/HumanPoseTransferEditor.cs" />
-    <Compile Include="Assets/VRM/UniGLTF/Editor/Tests/MaterialTests.cs" />
-    <Compile Include="Assets/VRM/UniGLTF/Editor/gltfAssetPostprocessor.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/MeshIntegrator.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMAOTMenu.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/SchemaTests.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Editor/BoneMappingEditor.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/ArrayTest.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Tests/VRMBlendShapeKeyTest.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipSelector.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonFormatterTest.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/FirstPerson/RendererFirstPersonFlagsDrawer.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/SpringBone/VRMSpringBoneColliderGroupEditor.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Tests/UniVRMSerializeTests.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/SerializeWithSchemaTests.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMAssetWriter.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipEditorHelper.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Tests/EnumUtilTest.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/VRMBlnedShapeProxyEditor.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/StringTest.cs" />
-    <Compile Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/IWriteStreamTest.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/BooleanTest.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/RPCTests.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/IWriteStreamTest.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/TimeTests.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonParserTest.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/RawTest.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/MeshIntegratorWizard.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Editor/UniGLTFVersionMenu.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/Meta/VRMMetaEditor.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipDrawer.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/Tests/VersionTests.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMExporterMenu.cs" />
-    <Compile Include="Assets/VRM/UniHumanoid/Editor/MuscleInspectorEditor.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/vrmAssetPostprocessor.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/FloatTest.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Editor/bvhAssetPostprocessor.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Editor/Tests/TextureTests.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/LookAt/VRMLookAtHeadEditor.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Editor/ImporterMenu.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/FirstPerson/VRMFirstPersonEditor.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMHumanoidNormalizerMenu.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Editor/Tests/UniGLTFTests.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/PreviewFaceRenderer.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Toml/TomlParserTests.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonDiffTests.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMVersionMenu.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/TreeTest.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Utf8StringTest.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/SkinnedMeshUtility.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Editor/Tests/JsonDeserializeTests.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Editor/Tests/BvhLoaderTests.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/IntTest.cs" />
-    <Compile Include="Assets/VRM/MToon/MToon/Editor/EditorUtils.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/PreviewEditor.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonSerializerTests.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/BoneMeshEraserWizard.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeAvatarEditor.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/SerializedBlendShapeClipEditor.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/VRMMonoBehaviourComparator.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipEditor.cs" />
+    <Compile Include="Assets/VRM/UniGLTF/Editor/Tests/MaterialTests.cs" />
+    <Compile Include="Assets/VRM/UniGLTF/Editor/gltfAssetPostprocessor.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/MeshIntegrator.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/SchemaTests.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipSelector.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonFormatterTest.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMAssetWriter.cs" />
+    <Compile Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/RPCTests.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/MsgPack/RawTest.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/MeshIntegratorWizard.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/Meta/VRMMetaEditor.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipDrawer.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/Tests/VersionTests.cs" />
+    <Compile Include="Assets/VRM/UniHumanoid/Editor/MuscleInspectorEditor.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/FirstPerson/VRMFirstPersonEditor.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonDiffTests.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Utf8StringTest.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/SkinnedMeshUtility.cs" />
+    <Compile Include="Assets/VRM/MToon/MToon/Editor/EditorUtils.cs" />
     <Compile Include="Assets/VRM/UniVRM/Editor/Format/VRMExportObjectEditor.cs" />
     <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/ValidatorTests.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Editor/Tests/Json/JsonSerializerTests.cs" />
     <Compile Include="Assets/VRM/ShaderProperty/Editor/ShaderPropMenu.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/SkinnedMeshUtility/BoneMeshEraserWizard.cs" />
     <Compile Include="Assets/VRM/MToon/MToon/Editor/MToonInspector.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeAvatarEditor.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/VRMMonoBehaviourComparator.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/SerializedBlendShapeClipEditor.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Editor/BlendShape/BlendShapeClipEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -388,6 +388,12 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -397,11 +403,17 @@
     <Reference Include="Google.Protobuf">
       <HintPath>Library/PackageCache/com.unity.barracuda@2.0.0/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
@@ -799,6 +811,9 @@
     <Reference Include="Unity.Barracuda.BurstBLAS">
       <HintPath>Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
@@ -811,17 +826,29 @@
     <Reference Include="Unity.Barracuda">
       <HintPath>Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>

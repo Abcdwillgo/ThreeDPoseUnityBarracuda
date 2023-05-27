@@ -8,7 +8,7 @@ public class FireTennisBall : MonoBehaviour
 {
     public GameObject TennisBall;
     public float BallSpeed;
-    public Vector3 initPosition = Camera.main.transform.position;
+    public Vector3 initPosition;
     public float numBalls = 5;
     public float maxBalls = 5;
     public float reloadTime = 2.5f;
@@ -21,6 +21,7 @@ public class FireTennisBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initPosition = Camera.main.transform.position;
         numBalls = maxBalls;
         ballsText.text = $"Balls: {numBalls}";
     }
@@ -55,7 +56,7 @@ public class FireTennisBall : MonoBehaviour
     private void FireBall(BallScript ball)
     {
         currentAimAssist = Instantiate(aimAssistPrefab);
-        Destroy(currentAimAssist, 1f);
+        Destroy(currentAimAssist, 3f);
         //Vector3 direction = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f)).normalized;
         Vector3 direction = (new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f))).normalized;
         currentAimAssist.transform.position = initPosition + direction * 10f;
