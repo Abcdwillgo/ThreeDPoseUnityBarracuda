@@ -58,3 +58,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Scripts/Model/Resnet34_3inputs_448x448_20200609.onnx
