@@ -811,11 +811,11 @@
     <Reference Include="Unity.Barracuda.BurstBLAS">
       <HintPath>Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -867,6 +867,26 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{EE117D9E-FC9C-A7E2-4AB2-7FCF581AF3EF}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="CW.Common.csproj">
+      <Project>{517631A2-968B-7943-B7E2-318712B5F477}</Project>
+      <Name>CW.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{D6139258-6C43-2A1C-B42E-2756DFD3586E}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanGUI.csproj">
+      <Project>{AB2E6E35-833D-AA6E-6866-EAECCE0D221D}</Project>
+      <Name>LeanGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.Editor.csproj">
+      <Project>{C6E65E4F-5054-28EF-65B0-2031BC551D44}</Project>
+      <Name>LeanTransition.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.csproj">
+      <Project>{28A8884C-F837-322E-8334-1655B81C8D2B}</Project>
+      <Name>LeanTransition</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

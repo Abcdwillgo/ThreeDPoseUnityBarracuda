@@ -107,9 +107,9 @@
     <Compile Include="Assets/VRM/UniVRM/Scripts/LookAt/LookTarget.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/glTF.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/Format/glTF_VRM_BlendShape.cs" />
-    <Compile Include="Assets/VRM/UniVRM/Scripts/LookAt/CurveMapper.cs" />
     <Compile Include="Assets/VRM/ShaderProperty/Runtime/VRM/VRM_UnlitTransparentZWrite.cs" />
     <Compile Include="Assets/VRM/DepthFirstScheduler/Unit.cs" />
+    <Compile Include="Assets/VRM/UniVRM/Scripts/LookAt/CurveMapper.cs" />
     <Compile Include="Assets/VRM/ShaderProperty/Runtime/VRM/VRM_UnlitTexture.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/ListTreeNode/ListTreeNodeExtensions.cs" />
     <Compile Include="Assets/VRM/MToon/MToon/Scripts/Enums.cs" />
@@ -216,6 +216,7 @@
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/BlendShapeKey.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/BytesReader.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Json/JsonFormatter.cs" />
+    <Compile Include="Assets/Scripts/LoadScene.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/TextureSamplerUtil.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/PoseModifier/HandPose.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/IStorage.cs" />
@@ -227,8 +228,8 @@
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/ExtensionsAndExtras/glTFNode.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/AOTCall.g.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonBoolValidator.cs" />
-    <Compile Include="Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonDictionaryValidator.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/MaterialImporter.cs" />
+    <Compile Include="Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonDictionaryValidator.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/BlendShapeBindingMerger.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/LookAt/Matrix4x4Extensions.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Scripts/Format/Bvh.cs" />
@@ -268,11 +269,11 @@
     <Compile Include="Assets/VRM/UniVRM/Scripts/SpringBone/VRMSpringBone.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/LookAt/VRMLookAtBlendShapeApplyer.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/Scripts/BoneMapping.cs" />
-    <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/ExtensionsAndExtras/KHR_draco_mesh_compression.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/AnimationCurveData.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/ListTreeNode/ListTreeNodeArrayExtensions.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/BlendShapeClip.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/TextureIO.cs" />
+    <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/ExtensionsAndExtras/KHR_draco_mesh_compression.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Utf8String/Utf8StringExtensions.cs" />
     <Compile Include="Assets/VRM/ShaderProperty/Runtime/GLTF/Unlit_Color.cs" />
     <Compile Include="Assets/VRM/MToon/MToon/Scripts/UtilsSetter.cs" />
@@ -1019,11 +1020,11 @@
     <Reference Include="Unity.Barracuda.BurstBLAS">
       <HintPath>Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -1072,6 +1073,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="CW.Common.csproj">
+      <Project>{517631A2-968B-7943-B7E2-318712B5F477}</Project>
+      <Name>CW.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{D6139258-6C43-2A1C-B42E-2756DFD3586E}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanGUI.csproj">
+      <Project>{AB2E6E35-833D-AA6E-6866-EAECCE0D221D}</Project>
+      <Name>LeanGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.Editor.csproj">
+      <Project>{C6E65E4F-5054-28EF-65B0-2031BC551D44}</Project>
+      <Name>LeanTransition.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.csproj">
+      <Project>{28A8884C-F837-322E-8334-1655B81C8D2B}</Project>
+      <Name>LeanTransition</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

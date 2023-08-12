@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Menu.unity
+    guid: a7f89a6a6f18447c4b56cba392c1e3b5
+  - enabled: 1
+    path: Assets/Scenes/TheForest.unity
     guid: 5deb965500846b64ab123fdbbbc2de24
+  - enabled: 1
+    path: Assets/Scenes/TheIce.unity
+    guid: c8f896bcf3d8b44a4a05293f1fad8d7a
+  - enabled: 1
+    path: Assets/Scenes/GrandMarsyon.unity
+    guid: ca0398418d3be4784966b886d7057806
   m_configObjects: {}
