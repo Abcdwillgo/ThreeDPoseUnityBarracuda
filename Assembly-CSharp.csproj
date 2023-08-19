@@ -319,6 +319,8 @@
     <Compile Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Scripts/SpringBone.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/PoseModifier/IPoseModifier.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonArrayValidator.cs" />
+    <Compile Include="Assets/SettingMenu.cs" />
+    <Compile Include="Assets/Scripts/SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku.shader" />
