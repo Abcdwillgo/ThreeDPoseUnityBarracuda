@@ -133,6 +133,7 @@
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Format/glTFAnimation.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/ConcreteCast.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Json/JsonPointer.cs" />
+    <Compile Include="Assets/Scripts/SettingsMenu.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/Format/glTF_VRM_Material.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Json/JsonSchema.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/AnimationExporter.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="Assets/VRM/DepthFirstScheduler/Scheduler.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/Extensions/UnityExtensions.cs" />
     <Compile Include="Assets/VRM/UniVRM/Scripts/BlendShape/BlendShapeKey.cs" />
+    <Compile Include="Assets/SettingMenu.cs" />
     <Compile Include="Assets/VRM/UniGLTF/Scripts/IO/BytesReader.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/Json/JsonFormatter.cs" />
     <Compile Include="Assets/Scripts/LoadScene.cs" />
@@ -319,8 +321,6 @@
     <Compile Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Scripts/SpringBone.cs" />
     <Compile Include="Assets/VRM/UniHumanoid/PoseModifier/IPoseModifier.cs" />
     <Compile Include="Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonArrayValidator.cs" />
-    <Compile Include="Assets/SettingMenu.cs" />
-    <Compile Include="Assets/Scripts/SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Avatar/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku.shader" />
