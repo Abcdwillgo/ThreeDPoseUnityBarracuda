@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 8996240874141660536}
   - component: {fileID: 8014711440865807042}
   m_Layer: 0
-  m_Name: tennisball
+  m_Name: tennisballPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,7 +315,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7628009605647521258}
-  speed: 25
+  speed: 3
+  gameManager: {fileID: 0}
+  zBoundary: -10
 --- !u!135 &8014711440865807042
 SphereCollider:
   m_ObjectHideFlags: 0

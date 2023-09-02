@@ -1,73 +1,89 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class FireTennisBall : MonoBehaviour
 {
     public GameObject TennisBall;
     public float BallSpeed;
-    public Vector3 initPosition;
+    public Transform playerTransform;
+    public float minDistanceFromPlayer = 5f;
+    public float maxDistanceFromPlayer = 10f;
     public float numBalls = 5;
     public float maxBalls = 5;
     public float reloadTime = 2.5f;
+    public float timeBetweenShots = 2.0f;  // Delay between each shot
     private bool isReloading = false;
-    public GameObject currentAimAssist, aimAssistPrefab;
+    public GameObject aimAssistPrefab;
 
     public Text ballsText;
+    public GameManager gameManager;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        initPosition = Camera.main.transform.position;
+        gameManager = FindObjectOfType<GameManager>();
         numBalls = maxBalls;
         ballsText.text = $"Balls: {numBalls}";
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isReloading)
+        if (gameManager.gameStarted && !isReloading)
         {
-            if (numBalls <= 0)
-            {
-                isReloading = true;
-                StartCoroutine(Reloading());
-            }
-            else
-            {
+            StartCoroutine(FireBallsSequence());
+        }
+    }
 
+    IEnumerator FireBallsSequence()
+    {
+        isReloading = true;
 
-                GameObject clone = Instantiate(TennisBall);
-                clone.transform.position = initPosition;
-                Destroy(clone, 7);
-                //to be continued...
-                var ballScript = clone.GetComponent<BallScript>();
-                FireBall(ballScript);
-                numBalls--;
-                ballsText.text = $"Balls: {numBalls}";
-            }
-
+        while (numBalls > 0)
+        {
+            StartCoroutine(FireBall());
+            yield return new WaitForSeconds(timeBetweenShots);
         }
 
-    }
-    private void FireBall(BallScript ball)
-    {
-        currentAimAssist = Instantiate(aimAssistPrefab);
-        Destroy(currentAimAssist, 3f);
-        //Vector3 direction = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f)).normalized;
-        Vector3 direction = (new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.2f, .2f), Random.Range(0, 1f))).normalized;
-        currentAimAssist.transform.position = initPosition + direction * 10f;
-        //yield return new WaitForSeconds(2f); 
-        ball.transform.position = initPosition;
-        System.Threading.Thread.Sleep(1000);
-        ball.FireBall(direction, 10f, BallSpeed);
-        StartCoroutine(Wait(1f));
+        StartCoroutine(Reloading());
     }
 
-    public IEnumerator Reloading()
+
+    private IEnumerator FireBall()
+    {
+        // Calculate distance and direction relative to the player
+        float distanceFromPlayer = Random.Range(minDistanceFromPlayer, maxDistanceFromPlayer);
+        Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
+
+        // Separate the direction into components
+        float xDirection = Random.Range(-3f, 3f);
+        float yDirection = Random.Range(0.1f, 2f); // Ensure y is positive to avoid shooting into the ground
+        float zDirection = directionToPlayer.z; // Maintain the original z-direction towards the player
+
+        // Combine them back into a single vector
+        Vector3 direction = new Vector3(xDirection, yDirection, zDirection).normalized;
+        Vector3 aimPosition = playerTransform.position + direction * distanceFromPlayer;
+
+        // Create aim assist prefab
+        GameObject aimAssist = Instantiate(aimAssistPrefab, aimPosition, Quaternion.identity);
+
+        // Wait for 2 seconds to let the player adjust
+        yield return new WaitForSeconds(2f);
+
+        // Spawn and fire ball
+        GameObject ball = Instantiate(TennisBall, transform.position, Quaternion.identity);
+        BallScript ballScript = ball.GetComponent<BallScript>();
+        ballScript.FireBall((aimAssist.transform.position - transform.position).normalized, BallSpeed, 0);
+
+        Destroy(aimAssist); // Destroy aim assist now that the ball has been fired
+        Destroy(ball, 7f);
+
+        numBalls--;
+        ballsText.text = $"Balls: {numBalls}";
+    }
+
+
+
+    IEnumerator Reloading()
     {
         ballsText.text = "Balls: reloading...";
         yield return new WaitForSeconds(reloadTime);
@@ -75,9 +91,4 @@ public class FireTennisBall : MonoBehaviour
         isReloading = false;
         ballsText.text = $"Balls: {numBalls}";
     }
-    public IEnumerator Wait(float Second)
-    {
-        yield return new WaitForSeconds(Second);
-    }
-
 }
