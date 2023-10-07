@@ -19,13 +19,14 @@ public class BallScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        //if the Ball hits the Racket
         if (other.gameObject.CompareTag("Player"))
         {
             gameManager.AddPoint();
             Destroy(this.gameObject);
         }
     }
-    public float zBoundary = -10f; // Set this to whatever value makes sense for your game
+    public float zBoundary = -10f; 
 
     void Update()
     {
