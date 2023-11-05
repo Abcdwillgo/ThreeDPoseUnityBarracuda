@@ -482,6 +482,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146911541}
   m_CullTransparentMesh: 1
+--- !u!1 &194530132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194530134}
+  - component: {fileID: 194530133}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &194530133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194530132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2e6bbabf20dcf489a6a0fd40a03915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs:
+  - {fileID: 7950161503750474362, guid: c87274e2296e33f4f996f11c93bd6398, type: 3}
+  - {fileID: 8153960698449026245, guid: 2d2342d77245d6d4693ba6e2d85f22a4, type: 3}
+  - {fileID: 6683674057018398570, guid: 627160cf7247442478a868d9668b25f5, type: 3}
+  characterIndex: 0
+  characterName: {fileID: 1461055056}
+  left: {fileID: 430854890}
+  right: {fileID: 487672881}
+  characterImage: {fileID: 237417885}
+  characterImages:
+  - {fileID: 21300000, guid: f0f7ade1d7a0a7147a701aedc866b57d, type: 3}
+  - {fileID: 21300000, guid: 091ad7d2e3f4a3a40ad928e8cf10ffb2, type: 3}
+  - {fileID: 21300000, guid: 9e0c06dcd20367d47902194d8e93ef15, type: 3}
+--- !u!4 &194530134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194530132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &211025151
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +958,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430854891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: OnClickLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430854891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1022,7 +1091,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 487672882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: OnClickRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &487672882
 MonoBehaviour:
   m_ObjectHideFlags: 0
