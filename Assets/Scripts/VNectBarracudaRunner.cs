@@ -137,6 +137,11 @@ public class VNectBarracudaRunner : MonoBehaviour
     private float Countdown = 0;
     public Texture2D InitImg;
 
+    private void Awake()
+    {
+        VNectModel = FindObjectOfType<VNectModel>();
+    }
+
     private void Start()
     {
         // Initialize 
