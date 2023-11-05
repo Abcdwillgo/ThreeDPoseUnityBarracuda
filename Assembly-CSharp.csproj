@@ -407,6 +407,7 @@
     <None Include="Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
     <None Include="Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
     <None Include="Assets\#NVJOB Slender\Example\Environment\Materials\Fake Light Flash.shader" />
+    <None Include="Assets\Winston\Document\readme.txt" />
     <None Include="Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
     <None Include="Assets\Avatar\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
     <None Include="Assets\Avatar\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
