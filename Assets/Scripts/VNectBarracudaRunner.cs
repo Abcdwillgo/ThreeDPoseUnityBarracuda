@@ -139,12 +139,13 @@ public class VNectBarracudaRunner : MonoBehaviour
 
     private void Awake()
     {
-        VNectModel = FindObjectOfType<VNectModel>();
+        
     }
 
     private void Start()
     {
-        // Initialize 
+        // Initialize
+        VNectModel = FindObjectOfType<VNectModel>();
         HeatMapCol_Squared = HeatMapCol * HeatMapCol;
         HeatMapCol_Cube = HeatMapCol * HeatMapCol * HeatMapCol;
         HeatMapCol_JointNum = HeatMapCol * JointNum;

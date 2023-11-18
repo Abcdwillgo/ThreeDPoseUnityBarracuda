@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CharacterManager : MonoBehaviour
 {
     public GameObject[] charactersInScene;
+    public GameObject[] characterPrefabs;
     public int characterIndex;
     string CharacterName;
     public GameObject CharacterHolder;
@@ -39,10 +40,11 @@ public class CharacterManager : MonoBehaviour
     {
         // Find all the characters in the new scene with the tag "PlayerCharacter"
         GameObject[] foundCharacters = GameObject.FindGameObjectsWithTag("PlayerCharacter");
-
+        print(characterIndex);
+        charactersInScene = foundCharacters;
         // Assuming the characters are in the same order as the characterImages,
         // we deactivate all and then activate the selected one
-        foreach (GameObject character in foundCharacters)
+        foreach (GameObject character in charactersInScene)
         {
             character.SetActive(false);
         }
@@ -50,7 +52,7 @@ public class CharacterManager : MonoBehaviour
         // Activate the selected character
         if (foundCharacters.Length > characterIndex && characterIndex >= 0)
         {
-            foundCharacters[characterIndex].SetActive(true);
+            charactersInScene[characterIndex].SetActive(true);
         }   
         else
         {
@@ -62,8 +64,14 @@ public class CharacterManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         characterImage.sprite = characterImages[0];
-        characterName.text = charactersInScene[0].name;
-        
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            characterName.text = characterPrefabs[0].name;
+        }
+        else
+        {
+            characterName.text = charactersInScene[0].name;
+        }
 
     }
 
@@ -79,7 +87,7 @@ public class CharacterManager : MonoBehaviour
             characterIndex--;
         }
             characterImage.sprite = characterImages[characterIndex];
-            CharacterName = charactersInScene[characterIndex].name;
+            CharacterName = characterPrefabs[characterIndex].name;
             characterName.text = CharacterName;
     }
     public void OnClickRight()
@@ -93,7 +101,7 @@ public class CharacterManager : MonoBehaviour
             characterIndex++;
         }
         characterImage.sprite = characterImages[characterIndex];
-        CharacterName = charactersInScene[characterIndex].name;
+        CharacterName = characterPrefabs[characterIndex].name;
         characterName.text = CharacterName;
     }
     // Update is called once per frame

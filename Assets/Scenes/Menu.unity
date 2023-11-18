@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -511,11 +511,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2e6bbabf20dcf489a6a0fd40a03915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactersInScene: []
   characterPrefabs:
   - {fileID: 7950161503750474362, guid: c87274e2296e33f4f996f11c93bd6398, type: 3}
   - {fileID: 8153960698449026245, guid: 2d2342d77245d6d4693ba6e2d85f22a4, type: 3}
   - {fileID: 6683674057018398570, guid: 627160cf7247442478a868d9668b25f5, type: 3}
   characterIndex: 0
+  CharacterHolder: {fileID: 0}
   characterName: {fileID: 1461055056}
   left: {fileID: 430854890}
   right: {fileID: 487672881}
@@ -959,7 +961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194530133}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
         m_MethodName: OnClickLeft
         m_Mode: 1
@@ -1092,7 +1094,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 194530133}
         m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
         m_MethodName: OnClickRight
         m_Mode: 1
