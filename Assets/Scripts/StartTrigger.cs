@@ -15,8 +15,15 @@ public class StartTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<RacketScript>().isStarting = true;
+            StartCoroutine(CountDown(other.gameObject));
+           
             Debug.Log("It is starting!!!");
         }
+    }
+    IEnumerator CountDown(GameObject other)
+    {
+        other.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(5);
+        other.GetComponent<RacketScript>().isStarting = true;
     }
 }
