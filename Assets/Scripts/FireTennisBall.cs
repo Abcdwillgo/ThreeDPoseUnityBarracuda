@@ -24,6 +24,7 @@ public class FireTennisBall : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         numBalls = maxBalls;
         ballsText.text = $"Balls: {numBalls}";
+        playerTransform = FindObjectOfType<VNectModel>().transform;
     }
 
     void Update()

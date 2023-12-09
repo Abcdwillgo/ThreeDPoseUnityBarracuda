@@ -22,7 +22,7 @@ public class StartTrigger : MonoBehaviour
     }
     IEnumerator CountDown(GameObject other)
     {
-        other.GetComponent<AudioSource>().Play();
+        this.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(5);
         other.GetComponent<RacketScript>().isStarting = true;
     }

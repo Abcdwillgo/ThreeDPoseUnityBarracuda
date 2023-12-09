@@ -12,6 +12,7 @@ public class RacketScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gameManager = FindObjectOfType<GameManager>();
+        startTrigger = GameObject.FindGameObjectWithTag("Start");
     }
 
     
