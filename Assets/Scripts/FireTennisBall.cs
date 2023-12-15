@@ -56,8 +56,8 @@ public class FireTennisBall : MonoBehaviour
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
 
         // Separate the direction into components
-        float xDirection = Random.Range(-2f, 2f);
-        float yDirection = Random.Range(0.1f, 1.5f); // Ensure y is positive to avoid shooting into the ground
+        float xDirection = Random.Range(-1f, 1f);
+        float yDirection = Random.Range(0.1f, 0.9f); // Ensure y is positive to avoid shooting into the ground
         float zDirection = directionToPlayer.z; // Maintain the original z-direction towards the player
 
         // Combine them back into a single vector
