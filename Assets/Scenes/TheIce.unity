@@ -780,7 +780,7 @@ PrefabInstance:
     - target: {fileID: 5936454072680944393, guid: 6a916578ee39b4583bf1416948df071e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5936454072680944393, guid: 6a916578ee39b4583bf1416948df071e,
         type: 3}
@@ -923,7 +923,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 210a26960a1c76a41a8003ef4e36bee3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 19cbd5325751e40fe8f7986ead481fff, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2891,7 +2891,7 @@ RectTransform:
   - {fileID: 177346521}
   - {fileID: 1201599424}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3277,7 +3277,7 @@ Transform:
   m_Children:
   - {fileID: 1059375642}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 22.5, y: 0, z: 0}
 --- !u!114 &1900894909
 MonoBehaviour:
