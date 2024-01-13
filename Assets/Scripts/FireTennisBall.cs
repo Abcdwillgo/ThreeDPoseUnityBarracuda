@@ -12,7 +12,7 @@ public class FireTennisBall : MonoBehaviour
     public float numBalls = 5;
     public float maxBalls = 5;
     public float reloadTime = 2.5f;
-    public float timeBetweenShots = 2.0f;  // Delay between each shot
+    private float timeBetweenShots = 4.0f;  // Delay between each shot
     private bool isReloading = false;
     public GameObject aimAssistPrefab;
 
@@ -56,24 +56,23 @@ public class FireTennisBall : MonoBehaviour
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
 
         // Separate the direction into components
-        float xDirection = Random.Range(-1f, 1f);
-        float yDirection = Random.Range(0.1f, 0.9f); // Ensure y is positive to avoid shooting into the ground
-        float zDirection = directionToPlayer.z; // Maintain the original z-direction towards the player
-
+        float xDirection = Random.Range(-0.7f, 0.7f);
+        float yDirection = Random.Range(1.5f, 2.25f); // Ensure y is positive to avoid shooting into the ground
+        float zDirection = Random.Range(-0.8f, 1.2f);
         // Combine them back into a single vector
-        Vector3 direction = new Vector3(xDirection, yDirection, zDirection).normalized;
-        Vector3 aimPosition = playerTransform.position + direction * distanceFromPlayer;
+        Vector3 direction = new Vector3(xDirection, yDirection, zDirection);
+        //Vector3 aimPosition = playerTransform.position + direction * distanceFromPlayer;
 
         // Create aim assist prefab
-        GameObject aimAssist = Instantiate(aimAssistPrefab, aimPosition, Quaternion.identity);
+        GameObject aimAssist = Instantiate(aimAssistPrefab, direction, Quaternion.identity);
 
         // Wait for 2 seconds to let the player adjust
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         // Spawn and fire ball
         GameObject ball = Instantiate(TennisBall, transform.position, Quaternion.identity);
         BallScript ballScript = ball.GetComponent<BallScript>();
-        ballScript.FireBall((aimAssist.transform.position - transform.position).normalized, BallSpeed, 0);
+        ballScript.FireBall((this.transform.position - aimAssist.transform.position).normalized, BallSpeed, 0);
 
         Destroy(aimAssist); // Destroy aim assist now that the ball has been fired
         Destroy(ball, 7f);
