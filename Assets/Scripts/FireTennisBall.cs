@@ -18,9 +18,12 @@ public class FireTennisBall : MonoBehaviour
     private AudioSource shootingsfx;
     public Text ballsText;
     public GameManager gameManager;
+    private static FireTennisBall instance;
+    public static FireTennisBall Instance {  get { return instance; } }
 
     void Start()
     {
+        instance = this;
         shootingsfx = this.GetComponent<AudioSource>();
         gameManager = FindObjectOfType<GameManager>();
         numBalls = maxBalls;
@@ -28,15 +31,7 @@ public class FireTennisBall : MonoBehaviour
         playerTransform = FindObjectOfType<VNectModel>().transform;
     }
 
-    void Update()
-    {
-        if (gameManager.gameStarted && !isReloading)
-        {
-            StartCoroutine(FireBallsSequence());
-        }
-    }
-
-    IEnumerator FireBallsSequence()
+    public IEnumerator FireBallsSequence()
     {
         isReloading = true;
 
@@ -50,7 +45,7 @@ public class FireTennisBall : MonoBehaviour
     }
 
 
-    private IEnumerator FireBall()
+    public IEnumerator FireBall()
     {
         shootingsfx.Play();
         // Calculate distance and direction relative to the player

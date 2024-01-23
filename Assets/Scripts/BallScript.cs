@@ -25,15 +25,9 @@ public class BallScript : MonoBehaviour
             gameManager.AddPoint();
             Destroy(this.gameObject);
         }
-    }
-    public float zBoundary = -10f; 
-
-    void Update()
-    {
-        if (transform.position.z < zBoundary)
+        else
         {
             gameManager.Miss();
-            Destroy(this.gameObject);
         }
     }
 }

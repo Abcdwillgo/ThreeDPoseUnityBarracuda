@@ -39,6 +39,7 @@ public class RacketScript : MonoBehaviour
         {
             float range = Random.Range(1 / 4, 2 / 3);
             gameManager.AddPoint();
+            this.gameObject.GetComponent<AudioSource>().Play();
             Vector3 startvel = collision.gameObject.GetComponent<Rigidbody>().velocity;
             collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-(startvel.x - (range * startvel.x)), startvel.y, -(startvel.z - (startvel.z * range)));
         };

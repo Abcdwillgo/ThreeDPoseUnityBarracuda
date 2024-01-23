@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         RequestPermission();
+        
     }
     private void Start()
     {
@@ -51,6 +52,9 @@ public class GameManager : MonoBehaviour
         if (misses >= 3)
         {
             print("you lose!");
+            gameStarted = false;
+            StopCoroutine(FireTennisBall.Instance.FireBallsSequence());
+            StopCoroutine(FireTennisBall.Instance.FireBall());
            // SceneManager.LoadScene("Menu");
         }
     }
@@ -74,5 +78,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         countdownText.gameObject.SetActive(false);
         gameStarted = true;
+        StartCoroutine(FireTennisBall.Instance.FireBallsSequence());
     }
 }
