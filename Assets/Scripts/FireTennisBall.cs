@@ -15,12 +15,13 @@ public class FireTennisBall : MonoBehaviour
     private float timeBetweenShots = 4.0f;  // Delay between each shot
     private bool isReloading = false;
     public GameObject aimAssistPrefab;
-
+    private AudioSource shootingsfx;
     public Text ballsText;
     public GameManager gameManager;
 
     void Start()
     {
+        shootingsfx = this.GetComponent<AudioSource>();
         gameManager = FindObjectOfType<GameManager>();
         numBalls = maxBalls;
         ballsText.text = $"Balls: {numBalls}";
@@ -51,6 +52,7 @@ public class FireTennisBall : MonoBehaviour
 
     private IEnumerator FireBall()
     {
+        shootingsfx.Play();
         // Calculate distance and direction relative to the player
         float distanceFromPlayer = Random.Range(minDistanceFromPlayer, maxDistanceFromPlayer);
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
