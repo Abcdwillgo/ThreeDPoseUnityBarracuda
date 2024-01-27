@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int points = 0;
     public int misses = 0;
     public bool gameStarted = false;
+    public GameObject gameOverScreen;
     public void RequestPermission()
     {
         Application.ExternalEval("requestWebcamPermission();");
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         RequestPermission();
-        
+        gameOverScreen.SetActive(false);
     }
     private void Start()
     {
@@ -55,8 +56,18 @@ public class GameManager : MonoBehaviour
             gameStarted = false;
             StopCoroutine(FireTennisBall.Instance.FireBallsSequence());
             StopCoroutine(FireTennisBall.Instance.FireBall());
+            gameOverScreen.SetActive(true);
            // SceneManager.LoadScene("Menu");
         }
+    }
+    public void reloadScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
+    }
+    public void backToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void Win()
