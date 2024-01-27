@@ -19,7 +19,7 @@ public class FireTennisBall : MonoBehaviour
     public Text ballsText;
     public GameManager gameManager;
     private static FireTennisBall instance;
-    public static FireTennisBall Instance {  get { return instance; } }
+    public static FireTennisBall Instance { get { return instance; } }
 
     void Start()
     {
@@ -47,7 +47,8 @@ public class FireTennisBall : MonoBehaviour
 
     public IEnumerator FireBall()
     {
-        shootingsfx.Play();
+        while (gameManager.gameStarted)
+            shootingsfx.Play();
         // Calculate distance and direction relative to the player
         float distanceFromPlayer = Random.Range(minDistanceFromPlayer, maxDistanceFromPlayer);
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
@@ -76,8 +77,8 @@ public class FireTennisBall : MonoBehaviour
 
         numBalls--;
         ballsText.text = $"Balls: {numBalls}";
-    }
 
+    }
 
 
     IEnumerator Reloading()
