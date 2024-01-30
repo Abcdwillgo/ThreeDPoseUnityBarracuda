@@ -137,10 +137,6 @@ public class VNectBarracudaRunner : MonoBehaviour
     private float Countdown = 0;
     public Texture2D InitImg;
 
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {

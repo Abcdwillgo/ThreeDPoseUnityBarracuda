@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int points = 0;
     public int misses = 0;
     public bool gameStarted = false;
-    public GameObject gameOverScreen;
+    public GameObject finalStatePanel;
     public void RequestPermission()
     {
         Application.ExternalEval("requestWebcamPermission();");
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         RequestPermission();
-        gameOverScreen.SetActive(false);
+        finalStatePanel.SetActive(false);
     }
     private void Start()
     {
@@ -56,8 +56,9 @@ public class GameManager : MonoBehaviour
             gameStarted = false;
             StopCoroutine(FireTennisBall.Instance.FireBallsSequence());
             StopCoroutine(FireTennisBall.Instance.FireBall());
-            gameOverScreen.SetActive(true);
-           // SceneManager.LoadScene("Menu");
+            finalStatePanel.SetActive(true);
+            finalStatePanel.transform.Find("State").GetComponent<TextMeshProUGUI>().text = "GAME OVER!!";
+            finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text = points.ToString();
         }
     }
     public void reloadScene()
@@ -72,7 +73,9 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        // Leave this empty as per your request
+        finalStatePanel.SetActive(true);
+        finalStatePanel.transform.Find("State").GetComponent<TextMeshProUGUI>().text = "YOU WIN!!";
+        finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text = points.ToString();
     }
 
     IEnumerator Countdown()
