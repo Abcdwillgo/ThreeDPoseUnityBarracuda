@@ -59,6 +59,7 @@ public class FireTennisBall : MonoBehaviour
             float xDirection = Random.Range(-0.7f, 0.7f);
             float yDirection = Random.Range(1.5f, 2.25f); // Ensure y is positive to avoid shooting into the ground
             float zDirection = Random.Range(-0.8f, 1.2f);
+
             // Combine them back into a single vector
             Vector3 direction = new Vector3(xDirection, yDirection, zDirection);
             //Vector3 aimPosition = playerTransform.position + direction * distanceFromPlayer;

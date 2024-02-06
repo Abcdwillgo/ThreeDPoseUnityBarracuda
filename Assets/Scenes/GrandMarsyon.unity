@@ -164,7 +164,7 @@ RectTransform:
   m_GameObject: {fileID: 83592856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 47.347}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516367425}
@@ -2401,7 +2401,6 @@ MonoBehaviour:
   rb: {fileID: 7628009605647521258, guid: cc391528c37d14a8ab1d5f947bbc8ccd, type: 3}
   speed: 25
   gameManager: {fileID: 0}
-  zBoundary: -10
 --- !u!4 &1301006426
 Transform:
   m_ObjectHideFlags: 0
@@ -2867,6 +2866,7 @@ MonoBehaviour:
   points: 0
   misses: 0
   gameStarted: 0
+  finalStatePanel: {fileID: 0}
 --- !u!4 &1863146420
 Transform:
   m_ObjectHideFlags: 0
