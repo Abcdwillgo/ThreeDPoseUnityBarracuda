@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     public void Miss()
     {
         misses++;
-        if (misses >= 3)
+        if (misses >= 10)
         {
             print("you lose!");
             gameStarted = false;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             StopCoroutine(FireTennisBall.Instance.FireBall());
             finalStatePanel.SetActive(true);
             finalStatePanel.transform.Find("State").GetComponent<TextMeshProUGUI>().text = "GAME OVER!!";
-            finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text = points.ToString();
+//            finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text += points.ToString();
         }
     }
     public void reloadScene()
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         finalStatePanel.SetActive(true);
         finalStatePanel.transform.Find("State").GetComponent<TextMeshProUGUI>().text = "YOU WIN!!";
-        finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text = points.ToString();
+        finalStatePanel.transform.Find("Points").GetComponent<TextMeshProUGUI>().text += points.ToString();
     }
 
     IEnumerator Countdown()
