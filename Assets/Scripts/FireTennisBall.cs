@@ -11,7 +11,7 @@ public class FireTennisBall : MonoBehaviour
     public float maxDistanceFromPlayer = 10f;
     public float numBalls = 5;
     public float maxBalls = 5;
-    public float reloadTime = 2.5f;
+    public float reloadTime = 4f;
     private float timeBetweenShots = 7.0f;  // Delay between each shot
     private bool isReloading = false;
     public GameObject aimAssistPrefab;
@@ -68,7 +68,7 @@ public class FireTennisBall : MonoBehaviour
             GameObject aimAssist = Instantiate(aimAssistPrefab, direction, Quaternion.identity);
 
             // Wait for 3 seconds to let the player adjust
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(4f);
 
             // Spawn and fire ball
             GameObject ball = Instantiate(TennisBall, transform.position, Quaternion.identity);

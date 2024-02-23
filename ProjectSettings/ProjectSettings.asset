@@ -742,7 +742,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 0
@@ -810,7 +810,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -825,11 +831,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 9ec67797-6b57-4ea0-971b-9323d19d5732
+  cloudProjectId: cee4c3c1-d27f-4ebd-9d58-09b4826315cf
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ThreeDPoseUnitySample (1)
-  organizationId: digital-standard
+  projectName: WebcamTennis
+  organizationId: soroush_m2
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

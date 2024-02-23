@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,8 +288,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 211025152}
   - {fileID: 800555310}
+  - {fileID: 211025152}
   - {fileID: 1591928274}
   m_Father: {fileID: 281622714}
   m_RootOrder: 0
@@ -578,7 +578,7 @@ RectTransform:
   - {fileID: 2111393283}
   - {fileID: 856011139}
   m_Father: {fileID: 113157502}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd146527b61614a96da3a84e74ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on: 0
+  on: 1
   turnOffSiblings: 0
   onTransitions:
     speed: -1
@@ -1567,8 +1567,8 @@ GameObject:
   - component: {fileID: 800555310}
   - component: {fileID: 800555312}
   - component: {fileID: 800555311}
-  - component: {fileID: 800555313}
   - component: {fileID: 800555314}
+  - component: {fileID: 800555313}
   m_Layer: 5
   m_Name: LevelsMenu
   m_TagString: Untagged
@@ -1601,7 +1601,7 @@ RectTransform:
   - {fileID: 487672880}
   - {fileID: 237417884}
   m_Father: {fileID: 113157502}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd146527b61614a96da3a84e74ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on: 0
+  on: 1
   turnOffSiblings: 0
   onTransitions:
     speed: -1
@@ -3010,7 +3010,7 @@ PrefabInstance:
     - target: {fileID: 292349379004031803, guid: b20b4d1fbe4ae44b3ae7678fcde9c43c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 292349379004031803, guid: b20b4d1fbe4ae44b3ae7678fcde9c43c,
         type: 3}
